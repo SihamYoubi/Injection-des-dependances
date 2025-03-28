@@ -3,6 +3,7 @@ package net.siham.presentation;
 import net.siham.dao.DaoImpl;
 import net.siham.metier.MetierImpl;
 
+//Instanciation statique
 public class Presentation1 {
     public static void main(String[] args) {
         DaoImpl d = new DaoImpl();
