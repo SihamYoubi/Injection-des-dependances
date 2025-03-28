@@ -46,5 +46,14 @@ Cela permet de charger des classes et d'injecter des dépendances sans connaîtr
 
 ![Instanciation dynamique](captures/InstanciationDynamique-image6.JPG)
 
+   c. En utilisant le Framework Spring :
 
+L'injection des dépendances a été implémentée en utilisant le Framework Spring, selon deux approches :
+
+- Version XML :
+
+Dans cette approche, la configuration des beans est définie dans un fichier XML (config.xml).
+Les classes et leurs dépendances y sont déclarées manuellement, permettant à Spring de gérer leur instanciation et leur injection.
+
+![Version XML](captures/VersionXML-image7.JPG)
 
