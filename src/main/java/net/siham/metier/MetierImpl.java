@@ -1,9 +1,13 @@
 package net.siham.metier;
 
 import net.siham.dao.IDao;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class MetierImpl implements IMetier {
 
+    @Autowired
     private IDao dao; //couplage faible
 
     @Override

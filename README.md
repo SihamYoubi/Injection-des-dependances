@@ -1,6 +1,6 @@
 ## Objectif
 
-Ce travail a pour objectif de mettre en pratique le principe de couplage faible en Java,
+Ce travail a pour objectif de mettre en pratique le principe de couplage faible en Java.
 
 **Étapes de réalisation :**
 
@@ -30,23 +30,24 @@ Ce travail a pour objectif de mettre en pratique le principe de couplage faible 
 
 5. L'injection des dépendances :
 
-   a. Par instanciation statique :
+a. Par instanciation statique :
 
 La classe DaoImpl est instanciée directement à l'aide de new DaoImpl(), puis elle est injectée dans le constructeur de la classe MetierImpl.
 L'injection de dépendances par instanciation statique se fait au moment de la compilation, où les objets sont créés explicitement à l'aide de leurs constructeurs.
 
+
 ![Instanciation statique](captures/InstanciationStatique-image5.JPG)
 
-   b. Par instanciation dynamique :
+b. Par instanciation dynamique :
 
 les classes DaoImpl et MetierImpl sont chargées dynamiquement à l'exécution via la réflexion (Class.forName()),
 et les instances sont créées avec newInstance(). L'instance de DaoImpl est ensuite injectée dans le constructeur de MetierImpl au moment de l'exécution.
 L'injection de dépendances par instanciation dynamique utilise la réflexion pour créer des instances d'objets à l'exécution.
-Cela permet de charger des classes et d'injecter des dépendances sans connaître les types à la compilation
+Cela permet de charger des classes et d'injecter des dépendances sans connaître les types à la compilation.
 
 ![Instanciation dynamique](captures/InstanciationDynamique-image6.JPG)
 
-   c. En utilisant le Framework Spring :
+c. En utilisant le Framework Spring :
 
 L'injection des dépendances a été implémentée en utilisant le Framework Spring, selon deux approches :
 
@@ -56,4 +57,14 @@ Dans cette approche, la configuration des beans est définie dans un fichier XML
 Les classes et leurs dépendances y sont déclarées manuellement, permettant à Spring de gérer leur instanciation et leur injection.
 
 ![Version XML](captures/VersionXML-image7.JPG)
+
+- Version Annotations :
+
+Cette version repose sur l'utilisation des annotations fournies par Spring.
+
+@Component permet de déclarer une classe comme bean.
+@Autowired permet l'injection automatique d'une dépendance.
+
+![Version Annotations](captures/VersionAnnotations-image8.JPG)
+
 
